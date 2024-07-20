@@ -5,6 +5,7 @@
 // int task5 = 4;
 
 int startTime;
+int stopTime;
 
 boolean taskSelected =   false;
 boolean timerRunning = false;
@@ -32,20 +33,22 @@ void showTask(){
 }
 
 void keyPressed(){
-  if(key >= '1'&&key <= '6' ){
-    scene=2;
+  if(key == '1' ){
+    scene=1;
     // selectedTask = key - '1';// タスクを選択
     taskSelected = true;
     timerRunning = true;
     startTime = millis();
     // 
-  } else if (key=='s'|| key=='S'){
+  } 
+  if (key=='s'|| key=='S'){
+    // println("sが押されています");
     if (timerRunning) {
       timerRunning = false;
-      taskSelected = false;
-      showTask();
-        scene = 1;
+      stopTime = millis();
+        // scene = 0;
     } 
+    // println(timerRunning);
   }
   if (key == 'r'||key == 'R') {
       //記録画面
@@ -53,7 +56,7 @@ void keyPressed(){
   }
   if (key == 'b' || key == 'B') {
     // タスク選択画面に戻る
-      scene=1;
+      scene=0;
   }
   if (key == 'f' || key == 'F') {
     // 羊画面

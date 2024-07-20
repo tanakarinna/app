@@ -1,4 +1,4 @@
-int scene = 1;
+int scene = 0;
 PImage back1;
 PImage back2;
 PImage back3;
@@ -19,9 +19,12 @@ void draw() {
 //  background(35,59,108);
 //  clock();
  switch(scene) {
-    case 1:
+    case 0:
       showTask();
       clock();
+    break;
+    case 1:
+    eatTimer();
     break;
     case 2:
       showTimer();
