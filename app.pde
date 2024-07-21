@@ -24,19 +24,36 @@ void draw() {
       clock();
     break;
     case 1:
-    eatTimer();
+    cookTimer();
     break;
     case 2:
-      showTimer();
-      clock();
+    eatTimer();
     break;
     case 3:
-      showRecords();
-      clock();
+    blushTeethTimer();
     break;
     case 4:
-      showSheeps();
-      clock();
+    washDishesTimer();
+    break;
+    case 5:
+    studyTimer();
+    break;
+    case 6:
+    washFaceTimer();
+    break;
+    case 7:
+    playPianoTimer();
+    break;
+    case 8:
+    readBookTimer();
+    break;
+    case 9:
+    showRecords();
+    clock();
+    break;
+    case 10:
+    showSheeps();
+    clock();
     break;
   }
 //  displayTask();

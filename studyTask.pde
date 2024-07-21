@@ -1,5 +1,5 @@
-void eatTimer(){
+void studyTimer(){
     image(back2, 0, 0, width, height);
-    text("食事中",50,50);
+    text("勉強中",50,50);
     showTimer();
 }

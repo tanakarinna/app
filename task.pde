@@ -27,6 +27,9 @@ void showTask(){
     text("4.お皿を洗う", 40, 270);
     text("5.勉強をする", 40, 310);
     text("6.顔を洗う",40,350);
+    text("7.ピアノを弾く", 280, 150);
+    text("8.本を読む", 280, 190);
+
     textSize(20);
     text("Rを押すと記録が見れるよ",20,460);
     text("Fを押すと羊を観察できるよ",20,500);
@@ -41,6 +44,48 @@ void keyPressed(){
     startTime = millis();
     // 
   } 
+  if(key == '2' ){
+    scene=2;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  }
+  if(key == '3' ){
+    scene=3;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
+  if(key == '4' ){
+    scene=4;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
+  if(key == '5' ){
+    scene=5;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
+  if(key == '6' ){
+    scene=6;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
+  if(key == '7' ){
+    scene=7;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
+  if(key == '8' ){
+    scene=8;
+    taskSelected = true;
+    timerRunning = true;
+    startTime = millis();
+  } 
   if (key=='s'|| key=='S'){
     // println("sが押されています");
     if (timerRunning) {
@@ -52,7 +97,7 @@ void keyPressed(){
   }
   if (key == 'r'||key == 'R') {
       //記録画面
-      scene=3;
+      scene=9;
   }
   if (key == 'b' || key == 'B') {
     // タスク選択画面に戻る
@@ -60,7 +105,7 @@ void keyPressed(){
   }
   if (key == 'f' || key == 'F') {
     // 羊画面
-      scene=4;
+      scene=10;
   }
 }
 
