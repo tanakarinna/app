@@ -24,7 +24,15 @@ void studyTimer(){
         study_rad = 0;
     }//画像が一回転したら0度に戻す
     image(back2, 0, 0, width, height);
-    text("勉強中",200,350);
+    if(timerRunning){
+        textSize(25);
+        text("勉強中...",200,200);
+    }else{
+        textSize(25);
+        text("勉強終わり！",170,200);
+    }
     showTimer();
     rotateImage(study_x,study_y,studySheep,study_rad,120,120);
+    textSize(15);
+    text("Bを押すとタスク選択画面に戻るよ",125,370);
 }
