@@ -9,7 +9,7 @@ void showTimer(){
     fill(255,255,255);
     textSize(20);
     // text("Selected Task:" + (selectedTask + 1), 20, 230);
-    text(passTime/1000, width/2-80, height/2);
+    text(passTime/1000/3600+"時間"+passTime/1000/60+"分"+passTime/1000%60+"秒", width/2-60, height/2);
     // text("If you want to stop the timer, press S.", 20, 250);
   }else {
     text(stopResult/1000, width/2-80, height/2); 

@@ -3,6 +3,7 @@ PImage back1;
 PImage back2;
 PImage back3;
 PImage back4;
+PImage studySheep;
 
 void setup() {
      size(480,640);
@@ -11,6 +12,7 @@ void setup() {
      back2 = loadImage("back2.png");
      back3 = loadImage("back3.png");
      back4 = loadImage("back4.png");
+     studySheep = loadImage("studySheep.png");
      PFont font=createFont("MicrosoftJhengHeiUILight-48",200);
      textFont(font);
 }
