@@ -23,7 +23,7 @@ void studyTimer() {
     if (study_rad > 360) {
         study_rad = 0;
     } //画像が一回転したら0度に戻す
-    image(back2, 0, 0, width, height);
+    image(timerBack, 0, 0, width, height);
     if (timerRunning) {
         textSize(25);
         text("勉強中...",200,200);

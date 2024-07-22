@@ -1,8 +1,9 @@
 int scene = 0;
-PImage back1;
-PImage back2;
-PImage back3;
-PImage back4;
+PImage homeBack;
+PImage taskBack;
+PImage timerBack;
+PImage recordBack;
+PImage sheepBack;
 PImage studySheep;
 PImage blushTeethSheep;
 PImage cookSheep;
@@ -11,67 +12,82 @@ PImage playPianoSheep;
 PImage washDishSheep;
 PImage washFaceSheep;
 PImage readBookSheep;
+PImage hukidasi1;
+PImage hukidasi2;
+PImage hukidasi3;
+PImage normalSheep;
+PImage sleepSheep;
+
 
 void setup() {
-     size(480,640);
-     initcookSheep();
-     back1 = loadImage("back1.png");
-     back2 = loadImage("back2.png");
-     back3 = loadImage("back3.png");
-     back4 = loadImage("back4.png");
-     studySheep = loadImage("studySheep.png");
-     blushTeethSheep = loadImage("blushTeethSheep.png");
+    size(480,640);
+    initcookSheep();
+    homeBack = loadImage("homeBack.png");
+    taskBack = loadImage("taskBack.png");
+    timerBack = loadImage("timerBack.png");
+    recordBack = loadImage("recordBack.png");
+    sheepBack = loadImage("sheepBack.png");
+    studySheep = loadImage("studySheep.png");
+    blushTeethSheep = loadImage("blushTeethSheep.png");
     cookSheep = loadImage("cookSheep.png");
     eatSheep = loadImage("eatSheep.png");
     playPianoSheep = loadImage("playPianoSheep.png");
     washDishSheep = loadImage("washDishSheep.png");
     washFaceSheep = loadImage("washFaceSheep.png");
     readBookSheep = loadImage("readBookSheep.png");
-    PFont font=createFont("MicrosoftJhengHeiUILight-48",200);
+    hukidasi1 = loadImage("hukidasi1.png");
+    hukidasi2 = loadImage("hukidasi2.png");
+    hukidasi3 = loadImage("hukidasi3.png");
+    normalSheep = loadImage("normalSheep.png");
+    sleepSheep = loadImage("sleepSheep.png");
+    PFont font = createFont("MicrosoftJhengHeiUILight-48",200);
     textFont(font);
 }
 
 void draw() {
-//  background(35,59,108);
-//  clock();
- switch(scene) {
-    case 0:
-      showTask();
-      clock();
-    break;
-    case 1:
-    cookTimer();
-    break;
-    case 2:
-    eatTimer();
-    break;
-    case 3:
-    blushTeethTimer();
-    break;
-    case 4:
-    washDishesTimer();
-    break;
-    case 5:
-    studyTimer();
-    break;
-    case 6:
-    washFaceTimer();
-    break;
-    case 7:
-    playPianoTimer();
-    break;
-    case 8:
-    readBookTimer();
-    break;
-    case 9:
-    showRecords();
-    clock();
-    break;
-    case 10:
-    showSheeps();
-    clock();
-    break;
-  }
-//  displayTask();
-//  taskTime();
+    //  background(35,59,108);
+    //  clock();
+    switch(scene) {
+        case 0:
+            home();
+            break;
+        case 1:
+            cookTimer();
+            break;
+        case 2:
+            eatTimer();
+            break;
+        case 3:
+            blushTeethTimer();
+            break;
+        case 4:
+            washDishesTimer();
+            break;
+        case 5:
+            studyTimer();
+            break;
+        case 6:
+            washFaceTimer();
+            break;
+        case 7:
+            playPianoTimer();
+            break;
+        case 8:
+            readBookTimer();
+            break;
+        case 9:
+            showRecords();
+            clock();
+            break;
+        case 10:
+            showSheeps();
+            clock();
+            break;
+        case 11:
+            showTask();
+            clock();
+            break;
+    }
+    //  displayTask();
+    //  taskTime();
 }
