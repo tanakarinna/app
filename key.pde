@@ -8,6 +8,10 @@ void keyPressed() {
             startTime = millis();
             // 
         }
+        if (kuuhuku == true) {
+            kuuhuku = false;
+            piimanEat = true;
+        }
     } 
     if (key == '2') {
         if (scene ==  11) {
@@ -16,6 +20,10 @@ void keyPressed() {
             timerRunning = true;
             startTime = millis();
         }
+        if (kuuhuku == true) {
+            kuuhuku = false;
+            tomatoEat = true;
+        }
     }
     if (key == '3') {
         if (scene ==  11) {
@@ -23,6 +31,10 @@ void keyPressed() {
             taskSelected = true;
             timerRunning = true;
             startTime = millis();
+        }
+        if (kuuhuku == true) {
+            kuuhuku = false;
+            nasubiEat = true;
         }
     } 
     if (key == '4') {
@@ -94,6 +106,15 @@ void keyPressed() {
         // タスク画面
         if (scene ==  0) {
             scene = 11;
+        }
+    }
+    if (key == 'o' || key == 'O') {
+        // タスク画面
+        if (piimanEat == true || tomatoEat == true || nasubiEat == true) {
+            piimanEat = false;
+            tomatoEat = false;
+            nasubiEat = false;
+            kuuhuku = true;
         }
     }
     if (key == ENTER || key == RETURN) {

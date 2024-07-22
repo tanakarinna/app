@@ -18,6 +18,12 @@ PImage hukidasi3;
 PImage normalSheep;
 PImage sleepSheep;
 PImage smileSheep;
+PImage piiman;
+PImage tomato;
+PImage nasubi;
+PImage piimanSheep;
+PImage tomatoSheep;
+PImage nasubiSheep;
 
 
 void setup() {
@@ -42,6 +48,12 @@ void setup() {
     normalSheep = loadImage("normalSheep.png");
     sleepSheep = loadImage("sleepSheep.png");
     smileSheep = loadImage("smileSheep.png");
+    piiman = loadImage("piiman.png");
+    tomato = loadImage("tomato.png");
+    nasubi = loadImage("nasubi.png");
+    piimanSheep = loadImage("piimanSheep.png");
+    tomatoSheep = loadImage("tomatoSheep.png");
+    nasubiSheep = loadImage("nasubiSheep.png");
     PFont font = createFont("MicrosoftJhengHeiUILight-48",200);
     textFont(font);
 }

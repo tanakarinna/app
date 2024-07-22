@@ -32,5 +32,5 @@ void eatTimer() {
     rotateImage(eat_x, eat_y, eatSheep, eat_rad, 120, 120);
     textSize(15);
     text("Sを押すとタイマーが止まるよ", 140, 370);
-    text("Bを押すとタスク選択画面に戻るよ", 125, 390);
+    text("Bを押すとホーム画面に戻るよ", 125, 390);
 }

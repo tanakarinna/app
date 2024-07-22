@@ -1,13 +1,57 @@
-// float cookSheep_x,cookSheep_y,cookSheep_w,cookSheep_h,cookSheep_dx,cookSheep_dy;//料理羊の情報
-// float eatSheep_x,eatSheep_y,eatSheep_w,eatSheep_h,eatSheep_dx,eatSheep_dy;//食事羊の情報
-// float blushTeethSheep_x,blushTeethSheep_y,blushTeethSheep_w,blushTeethSheep_h,blushTeethSheep_dx,blushTeethSheep_dy;//羊の情報
-// float washDishSheep_x,washDishSheep_y,washDishSheep_w,washDishSheep_h,washDishSheep_dx,washDishSheep_dy;//皿洗いの情報
-// float studySheep_x,studySheep_y,studySheep_w,studySheep_h,studySheep_dx,studySheep_dy;//皿洗いの情報
+// boolean kansatu_serihu1 = true;
+// boolean kansatu_serihu2 = false;
+boolean kuuhuku = true;
+boolean piimanEat = false;
+boolean tomatoEat = false;
+boolean nasubiEat = false;
+
 void showSheeps() {
     image(sheepBack, 0, 0, width, height);
-    // ellipse(cookSheep_x, cookSheep_y, cookSheep_w, cookSheep_h);
-    // cookSheep_x += cookSheep_dx;
-    // cookSheep_y += cookSheep_dy;
+    // if (kansatu_serihu1 == true) {
+    //     textSize(18);
+    //     text("あげたい野菜の番号を押してね", 110, 250);
+    
+// }
+    if (kuuhuku == true) {
+        image(normalSheep, 130, 320, 220, 220);
+        image(piiman, 70, 120, 100, 100);
+        image(tomato, 190, 120, 100, 100);
+        image(nasubi, 310, 120, 100, 100);
+        text("①", 115, 110);
+        text("②", 232, 110);
+        text("③", 348, 110);
+        textSize(15);
+        text("あげたい野菜の番号を押してね", 130, 240);
+        text("Bを押すとホーム画面に戻るよ", 135, 260);
+    } else if (piimanEat == true) {
+        image(piimanSheep, 130, 320, 220, 220);
+        image(tomato, 190, 120, 100, 100);
+        image(nasubi, 310, 120, 100, 100);
+        text("①", 115, 110);
+        text("②", 232, 110);
+        text("③", 348, 110);
+        textSize(15);
+        text("oを押すとおかわりできるよ", 150, 255);
+    } else if (tomatoEat == true) {
+        image(tomatoSheep, 130, 320, 220, 220);
+        image(piiman, 70, 120, 100, 100);
+        image(nasubi, 310, 120, 100, 100);
+        text("①", 115, 110);
+        text("②", 232, 110);
+        text("③", 348, 110);
+        textSize(15);
+        text("oを押すとおかわりできるよ", 150, 255);
+    } else if (nasubiEat == true) {
+        image(nasubiSheep, 130, 320, 220, 220);
+        image(piiman, 70, 120, 100, 100);
+        image(tomato, 190, 120, 100, 100);
+        text("①", 115, 110);
+        text("②", 232, 110);
+        text("③", 348, 110);
+        textSize(15);
+        text("oを押すとおかわりできるよ", 150, 255);
+    }
+    
     
     
     
@@ -16,12 +60,3 @@ void showSheeps() {
     
 }
 
-// void initcookSheep() {
-//     cookSheep_x = 0;
-//     cookSheep_y = 0;
-//     cookSheep_w = 30;
-//     cookSheep_h = 30;
-//     cookSheep_dx = 10;
-//     cookSheep_dy = 10;
-
-// }
