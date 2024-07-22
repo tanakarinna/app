@@ -129,6 +129,9 @@ void keyPressed() {
         else if (serihu3 ==  true) {
             serihu3 = false;
             serihu1 = true;
+        } else if (aisatu == true) {
+            aisatu = false;
+            serihu1 = true;
         }
         if (task_serihu1 == true) {
             task_serihu1 = false;
