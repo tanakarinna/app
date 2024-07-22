@@ -7,19 +7,22 @@
 int startTime;
 int stopTime;
 
-boolean taskSelected =   false;
-boolean timerRunning = false;
+boolean taskSelected =   false;//タスクを選んでいない状態
+boolean timerRunning = false;//タイマーが動いてない状態
 
 int selectedTask = 0;//タスクの初期値がが未選択状態
 
+//初期セリフの設定
+boolean task_serihu1 = true;
+boolean task_serihu2 = false;
 
 
 void showTask() {
     image(taskBack, 0, 0, width, height);
     fill(255,255,255);
     textSize(20);
-    text("＜夜を有意義に過ごすためのタスク＞", 20, 70);
-    text("タスクを選んで、番号を押そう",20,110);
+    text("~夜を有意義に過ごすためのタスク~", 20, 90);
+    // text("タスクを選んで、番号を押そう",20,110);
     textSize(20);
     text("1.ごはんを作る", 40, 150);
     text("2.ごはんを食べる", 40, 190);
@@ -30,120 +33,129 @@ void showTask() {
     text("7.ピアノを弾く", 280, 150);
     text("8.本を読む", 280, 190);
     
-    textSize(20);
-    text("Rを押すと記録が見れるよ",20,460);
-    text("Fを押すと羊を観察できるよ",20,500);
+    if (task_serihu1 ==  true) {
+        textSize(18);
+        text("タスクを選んで",90,430);
+        text("番号を押してね",90,470);
+        image(normalSheep,330,390,150,150);
+    } else if (task_serihu2 ==  true) {
+        textSize(18);
+        text("Bを押すと",110,430);
+        text("ホーム画面に戻るよ",70,470);
+        image(smileSheep,330,390,150,150);
+    }
+    
 }
 
-void keyPressed() {
-    if (key == '1') {
-        if (scene ==  11) {
-            scene = 1;
-            // selectedTask = key - '1';// タスクを選択
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-            // 
-        }
-    } 
-    if (key == '2') {
-        if (scene ==  11) {
-            scene = 2;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    }
-    if (key == '3') {
-        if (scene ==  11) {
-            scene = 3;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key == '4') {
-        if (scene ==  11) {
-            scene = 4;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key == '5') {
-        if (scene ==  11) {
-            scene = 5;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key == '6') {
-        if (scene ==  11) {
-            scene = 6;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key == '7') {
-        if (scene ==  11) {
-            scene = 7;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key == '8') {
-        if (scene ==  11) {
-            scene = 8;
-            taskSelected = true;
-            timerRunning = true;
-            startTime = millis();
-        }
-    } 
-    if (key ==  's' || key ==  'S') {
-        // println("sが押されています");
-        if (timerRunning) {
-            timerRunning = false;
-            stopTime = millis();
-            // scene = 0;
-        } 
-        // println(timerRunning);
-    }
-    if (key == 'r' ||  key == 'R') {
-        //記録画面
-        scene = 9;
-    }
-    if (key == 'b' || key == 'B') {
-        // ホーム選択画面に戻る
-        scene = 0;
-    }
-    if (key == 'f' || key == 'F') {
-        // 羊画面
-        scene = 10;
-    }
-    if (key == 't' || key == 'T') {
-        // タスク画面
-        if (scene ==  0) {
-            scene = 11;
-        }
-    }
-    if (key == ENTER || key == RETURN) {
-        if (serihu1 ==  true) {
-            serihu1 = false;
-            serihu2 = true;
-        }
-        else if (serihu2 ==  true) {
-            serihu2 = false;
-            serihu3 = true;
-        }
-        else if (serihu3 ==  true) {
-            serihu3 = false;
-            serihu1 = true;
-        }
-    }
-}
+// void keyPressed() {
+//     if (key == '1') {
+//         if (scene ==  11) {
+//             scene = 1;
+//             // selectedTask = key - '1';// タスクを選択
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//             // 
+//         }
+//     } 
+//     if (key == '2') {
+//         if (scene ==  11) {
+//             scene = 2;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     }
+//     if (key == '3') {
+//         if (scene ==  11) {
+//             scene = 3;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key == '4') {
+//         if (scene ==  11) {
+//             scene = 4;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key == '5') {
+//         if (scene ==  11) {
+//             scene = 5;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key == '6') {
+//         if (scene ==  11) {
+//             scene = 6;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key == '7') {
+//         if (scene ==  11) {
+//             scene = 7;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key == '8') {
+//         if (scene ==  11) {
+//             scene = 8;
+//             taskSelected = true;
+//             timerRunning = true;
+//             startTime = millis();
+//         }
+//     } 
+//     if (key ==  's' || key ==  'S') {
+//         // println("sが押されています");
+//         if (timerRunning) {
+//             timerRunning = false;
+//             stopTime = millis();
+//             // scene = 0;
+//         } 
+//         // println(timerRunning);
+//     }
+//     if (key == 'r' ||  key == 'R') {
+//         //記録画面
+//         scene = 9;
+//     }
+//     if (key == 'b' || key == 'B') {
+//         // ホーム選択画面に戻る
+//         scene = 0;
+//     }
+//     if (key == 'f' || key == 'F') {
+//         // 羊画面
+//         scene = 10;
+//     }
+//     if (key == 't' || key == 'T') {
+//         // タスク画面
+//         if (scene ==  0) {
+//             scene = 11;
+//         }
+//     }
+//     if (key == ENTER || key == RETURN) {
+//         if (serihu1 ==  true) {
+//             serihu1 = false;
+//             serihu2 = true;
+//         }
+//         else if (serihu2 ==  true) {
+//             serihu2 = false;
+//             serihu3 = true;
+//         }
+//         else if (serihu3 ==  true) {
+//             serihu3 = false;
+//             serihu1 = true;
+//         }
+//     }
+// }
 
 // void keyPressed() {
 // if (key == ENTER || key == RETURN) {
@@ -164,22 +176,22 @@ void keyPressed() {
 /*
 記録の閲覧、わからない
 */
-void showRecords() {
-    image(recordBack, 0, 0, width, height);
-    fill(0);
-    textSize(12);
-    
-    //String[] records = loadStrings("task_records.txt");
-    //if(records!= null) {
-    //int y = 20;
-    //for (String record : records) {
-    //text(record, 20, y);
-    //y += 20;
-    //   }
-// } else {
-    //text("No records found.", 20, 20);
+// void showRecords() {
+//     image(recordBack, 0, 0, width, height);
+//     fill(0);
+//     textSize(12);
+
+//     //String[] records = loadStrings("task_records.txt");
+//     //if(records!= null) {
+//     //int y = 20;
+//     //for (String record : records) {
+//     //text(record, 20, y);
+//     //y += 20;
+//     //   }
+// // } else {
+//     //text("No records found.", 20, 20);
+// // }
+
+//     textSize(16);
+//     text("Press 'B' to go back", 20, height - 30);
 // }
-    
-    textSize(16);
-    text("Press 'B' to go back", 20, height - 30);
-}

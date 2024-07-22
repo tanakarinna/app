@@ -17,8 +17,6 @@ void studyTimer() {
     
     
     
-    // study_x += study_dx;
-    // study_y += study_dy;
     study_rad += 1;
     if (study_rad > 360) {
         study_rad = 0;
@@ -34,6 +32,6 @@ void studyTimer() {
     showTimer();
     rotateImage(study_x,study_y,studySheep,study_rad,120,120);
     textSize(15);
-    text("Sを押すとタイマーが止まるよ",125,370);
+    text("Sを押すとタイマーが止まるよ",140,370);
     text("Bを押すとタスク選択画面に戻るよ",125,390);
 }

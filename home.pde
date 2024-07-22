@@ -22,7 +22,7 @@ void home() {
         image(normalSheep,170,380,150,150);
         image(sleepSheep,320,380,150,150);
         textSize(18);
-        text("Rを押すと",200,220); 
+        text("Rを押すと",220,220); 
         text("今までの記録を見れるよ",160,260);  
     }
     if (serihu3 == true) {
@@ -31,7 +31,7 @@ void home() {
         image(sleepSheep,170,380,150,150);
         image(normalSheep,320,380,150,150);
         textSize(18);
-        text("Sを押すと",280,220); 
+        text("Fを押すと",285,220); 
         text("僕を観察できるよ",260,260); 
     }
     

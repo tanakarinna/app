@@ -8,7 +8,7 @@ PImage studySheep;
 PImage blushTeethSheep;
 PImage cookSheep;
 PImage eatSheep;
-PImage playPianoSheep;
+PImage pianoSheep;
 PImage washDishSheep;
 PImage washFaceSheep;
 PImage readBookSheep;
@@ -17,11 +17,12 @@ PImage hukidasi2;
 PImage hukidasi3;
 PImage normalSheep;
 PImage sleepSheep;
+PImage smileSheep;
 
 
 void setup() {
     size(480,640);
-    initcookSheep();
+    // initcookSheep();
     homeBack = loadImage("homeBack.png");
     taskBack = loadImage("taskBack.png");
     timerBack = loadImage("timerBack.png");
@@ -31,7 +32,7 @@ void setup() {
     blushTeethSheep = loadImage("blushTeethSheep.png");
     cookSheep = loadImage("cookSheep.png");
     eatSheep = loadImage("eatSheep.png");
-    playPianoSheep = loadImage("playPianoSheep.png");
+    pianoSheep = loadImage("playPianoSheep.png");
     washDishSheep = loadImage("washDishSheep.png");
     washFaceSheep = loadImage("washFaceSheep.png");
     readBookSheep = loadImage("readBookSheep.png");
@@ -40,6 +41,7 @@ void setup() {
     hukidasi3 = loadImage("hukidasi3.png");
     normalSheep = loadImage("normalSheep.png");
     sleepSheep = loadImage("sleepSheep.png");
+    smileSheep = loadImage("smileSheep.png");
     PFont font = createFont("MicrosoftJhengHeiUILight-48",200);
     textFont(font);
 }
@@ -70,7 +72,7 @@ void draw() {
             washFaceTimer();
             break;
         case 7:
-            playPianoTimer();
+            pianoTimer();
             break;
         case 8:
             readBookTimer();
