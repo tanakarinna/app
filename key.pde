@@ -79,7 +79,7 @@ void keyPressed() {
     } 
     if (key ==  's' || key ==  'S') {
         // println("sが押されています");
-        if (timerRunning) {
+        if (timerRunning == true) {
             timerRunning = false;
             stopTime = millis();
             // scene = 0;
@@ -117,6 +117,17 @@ void keyPressed() {
             kuuhuku = true;
         }
     }
+    if (key == 'k' || key == 'K') {
+        // タスク画面
+        if (scene ==  1) {
+            if (timerRunning == false) {
+                String[] list = {"a", "b", "c", "d", "e"}; //文字列の指定
+                saveStrings("/data/history.txt", list); //「text.txt」という名前で保存
+                // println("seikou");
+            }
+        }
+    }
+    
     if (key == ENTER || key == RETURN) {
         if (serihu1 ==  true) {
             serihu1 = false;
